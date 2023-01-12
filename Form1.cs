@@ -125,8 +125,8 @@ namespace comtest
             {
 
 
-                ShowSerialData(serialPort1.ReadExisting());
-                //ShowSerialData(serialPort1.ReadLine());
+                //ShowSerialData(serialPort1.ReadExisting());
+                ShowSerialData(serialPort1.ReadLine());
                 Thread.Sleep(100);
     
             }   
