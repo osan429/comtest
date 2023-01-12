@@ -1,0 +1,2 @@
+:MEASure:VOLTage:DC?
+1000
