@@ -67,7 +67,8 @@ namespace comtest
         private void cb_stopbits_DropDown(object sender, EventArgs e)
         {
             cb_stopbits.Items.Clear();
-            cb_stopbits.Items.Add("None");
+            //C# 不支援 stopbit "None"
+          //  cb_stopbits.Items.Add("None");
             cb_stopbits.Items.Add("One");
             cb_stopbits.Items.Add("OnePointFive");
             cb_stopbits.Items.Add("Two");
