@@ -1,4 +1,9 @@
-C:
-500
-O:
-500
+//baudrate 19200/9600/4800/24400
+//parity Space(0)/Odd/Even/Mark(1)/None
+//databits
+//stopbits
+S:9600:Even:7:One
+C:C:
+T:500
+C:O:
+T:500

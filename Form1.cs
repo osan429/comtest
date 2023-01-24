@@ -35,53 +35,16 @@ namespace comtest
             }
         }
 
-        private void cb_baudrate_DropDown(object sender, EventArgs e)
-        {
-            cb_baudrate.Items.Clear();  
-            cb_baudrate.Items.Add("19200");
-            cb_baudrate.Items.Add("9600");
-            cb_baudrate.Items.Add("4800");
-            cb_baudrate.Items.Add("2400");
-        }
 
-        private void cb_parity_DropDown(object sender, EventArgs e)
-        {
-            cb_parity.Items.Clear();    
-            cb_parity.Items.Add("Space");
-            cb_parity.Items.Add("Odd");
-            cb_parity.Items.Add("Even");
-            cb_parity.Items.Add("Mark");
-            cb_parity.Items.Add("None");
- 
-        }
-
-        private void cb_databits_DropDown(object sender, EventArgs e)
-        {
-            cb_databits.Items.Clear();
-            cb_databits.Items.Add("8");
-            cb_databits.Items.Add("7");
-            cb_databits.Items.Add("6");
-            cb_databits.Items.Add("5");
-        }
-
-        private void cb_stopbits_DropDown(object sender, EventArgs e)
-        {
-            cb_stopbits.Items.Clear();
-            //C# 不支援 stopbit "None"
-          //  cb_stopbits.Items.Add("None");
-            cb_stopbits.Items.Add("One");
-            cb_stopbits.Items.Add("OnePointFive");
-            cb_stopbits.Items.Add("Two");
-        }
 
         private void button_connect_Click(object sender, EventArgs e)
         {
             serialPort1= new SerialPort();
             serialPort1.PortName = cb_port.Text;
-            serialPort1.BaudRate = int.Parse(cb_baudrate.Text);
-            serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), cb_parity.Text);
-            serialPort1.DataBits = int.Parse(cb_databits.Text);
-            serialPort1.StopBits = (StopBits) Enum.Parse(typeof(StopBits), cb_stopbits.Text);
+            serialPort1.BaudRate = int.Parse(listSerialSet[0]);
+            serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), listSerialSet[1]);
+            serialPort1.DataBits = int.Parse(listSerialSet[2]);
+            serialPort1.StopBits = (StopBits) Enum.Parse(typeof(StopBits), listSerialSet[3]);
             //serialPort1.ReadTimeout = 500;
             //serialPort1.WriteTimeout = 500;
             //需要新增異常處理
@@ -285,22 +248,57 @@ namespace comtest
             }
         }
 
+        /// <summary>
+        /// 讀取檔案內的設定及指令
+        /// </summary>
         //string arraylist for command 
-        //int arraylist for delaytime
+        List<string> listSerialSet = new List<string>();
+        //string arraylist for command 
         List<string> listSendCommand = new List<string>();
+        //int arraylist for delaytime
         List<int> listCommandDelayTime = new List<int>();
+        
         private void CommandRead(string fileName)
         {
+            listSerialSet.Clear();
             listSendCommand.Clear();
-            listCommandDelayTime.Clear();   
+            listCommandDelayTime.Clear();
+            string fd;
             try
             {
                 FileStream stream = new FileStream(fileName, FileMode.Open);
                 StreamReader reader = new StreamReader(stream);
                 while (reader.Peek() > -1) 
                 {
-                    listSendCommand.Add(reader.ReadLine());
-                    listCommandDelayTime.Add(int.Parse(reader.ReadLine()));
+                    fd = reader.ReadLine();
+                    switch (fd.Substring(0,2) )
+                    {
+                        case "S:":
+                            //讀取Srial連線設定
+                            SrialSetRead(fd.Substring(2), listSerialSet);
+                            break;
+
+                        case "C:":
+                            //讀取輸出指令
+                            listSendCommand.Add(fd.Substring(2));
+                            break;
+
+                        case "T:":
+                            //讀取執行時間設定
+                            listCommandDelayTime.Add(int.Parse(fd.Substring(2)));
+                            break;
+                            
+                        case "//":
+                            //讀取內容為註釋
+                            break;
+
+                        default:
+                            MessageBox.Show("檔案內容讀取異常");
+                            break;
+                    }
+                    
+                    //listSendCommand.Add(reader.ReadLine());
+                    //listCommandDelayTime.Add(int.Parse(reader.ReadLine()));
                 }
                 stream.Close();
             }
@@ -308,6 +306,21 @@ namespace comtest
             {
 
                 MessageBox.Show("File Open Fail : ", f.Message);
+            }
+        }
+        /// <summary>
+        /// 將檔案內的Srial連線設定讀取出來到list
+        /// </summary>
+        /// <param name="v"></param> 連線設定值；各項設定以":"分隔
+        /// <param name="listSerialSet"></param> 存儲設定的list
+        /// <exception cref="NotImplementedException"></exception>
+        private void SrialSetRead(string v, List<string> listSerialSet)
+        {
+            string[] subs = v.Split(':');
+
+            foreach (var sub in subs)
+            {
+                listSerialSet.Add(sub);
             }
         }
     }
