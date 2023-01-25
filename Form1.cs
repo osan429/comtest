@@ -45,7 +45,7 @@ namespace comtest
             serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), listSerialSet[1]);
             serialPort1.DataBits = int.Parse(listSerialSet[2]);
             serialPort1.StopBits = (StopBits) Enum.Parse(typeof(StopBits), listSerialSet[3]);
-            //serialPort1.ReadTimeout = 500;
+            serialPort1.ReadTimeout = 100;
             //serialPort1.WriteTimeout = 500;
             //需要新增異常處理
             try
@@ -88,9 +88,13 @@ namespace comtest
             while (serialPort1.IsOpen)
             {
 
-
+                if (serialPort1.BytesToRead>0)
+                {
+                    ShowSerialData(serialPort1.ReadLine());
+                }
+              
                 //ShowSerialData(serialPort1.ReadExisting());
-                ShowSerialData(serialPort1.ReadLine());
+                
                 Thread.Sleep(100);
     
             }   

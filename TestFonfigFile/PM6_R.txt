@@ -3,7 +3,3 @@
 //databits
 //stopbits
 S:9600:Even:7:One
-C:C:
-T:100
-C:O:
-T:100
