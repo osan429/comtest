@@ -215,6 +215,11 @@ namespace comtest
                 {
                     for (int j = 0; j < commandNumber; j++) 
                     {
+                        //Disconnect button click trigger interrupt
+                        if (serialPort1.IsOpen == false) 
+                        {
+                            return;
+                        }
                         //讀取list內部指令並發送
                         c = listSendCommand[j];
                         d = listCommandDelayTime[j];
