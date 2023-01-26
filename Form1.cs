@@ -23,6 +23,9 @@ namespace comtest
         private void Form1_Load(object sender, EventArgs e)
         {
             bt_send.Enabled = false;
+            bt_connect.Enabled = false;
+            bt_disconnect.Enabled = false;
+
         }
 
         private void comboBox_port_DropDown(object sender, EventArgs e)
@@ -45,7 +48,7 @@ namespace comtest
             serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), listSerialSet[1]);
             serialPort1.DataBits = int.Parse(listSerialSet[2]);
             serialPort1.StopBits = (StopBits) Enum.Parse(typeof(StopBits), listSerialSet[3]);
-            serialPort1.ReadTimeout = 100;
+            //serialPort1.ReadTimeout = 100;
             //serialPort1.WriteTimeout = 500;
             //需要新增異常處理
             try
@@ -54,8 +57,8 @@ namespace comtest
                 if (serialPort1.IsOpen)
                 {
                     ReadSerialData();
-                    button_connect.Enabled = false; 
-                    button_disconnect.Enabled = true;
+                    bt_connect.Enabled = false; 
+                    bt_disconnect.Enabled = true;
                     bt_send.Enabled = true;
                 }
             }
@@ -87,7 +90,7 @@ namespace comtest
         {
             while (serialPort1.IsOpen)
             {
-
+                //先檢查讀取暫存區是否有資料，若不檢查則readline()會一直等待到讀完一行才往下執行
                 if (serialPort1.BytesToRead>0)
                 {
                     ShowSerialData(serialPort1.ReadLine());
@@ -124,7 +127,7 @@ namespace comtest
         {
             try
             {
-                string path = @".\Log.txt";
+                string path = $@".\{tb_OutFileName.Text}_Log.txt";
                 //sw.Write(v);    
                 //sw.Flush(); 
                 //sw.Close();
@@ -166,8 +169,8 @@ namespace comtest
                 {
                     serialPort1.Close();
                 }
-                button_connect.Enabled = true;
-                button_disconnect.Enabled = false; 
+                bt_connect.Enabled = true;
+                bt_disconnect.Enabled = false; 
                 bt_send.Enabled = false;
                   
                 
@@ -249,6 +252,10 @@ namespace comtest
                 tb_config.Text = fileDialog.SafeFileName;     
   
                 
+            }
+            if (tb_config.Text != "") 
+            {
+                bt_connect.Enabled = true;
             }
         }
 

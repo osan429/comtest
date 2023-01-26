@@ -36,25 +36,28 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tb_cycleCount = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tb_config = new System.Windows.Forms.TextBox();
-            this.bt_config = new System.Windows.Forms.Button();
             this.bt_send = new System.Windows.Forms.Button();
-            this.button_disconnect = new System.Windows.Forms.Button();
-            this.button_connect = new System.Windows.Forms.Button();
+            this.bt_disconnect = new System.Windows.Forms.Button();
+            this.bt_connect = new System.Windows.Forms.Button();
             this.tb_testCycle = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.tb_config = new System.Windows.Forms.TextBox();
+            this.bt_config = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tb_OutFileName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -112,12 +115,9 @@
             this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.tb_cycleCount);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.tb_config);
-            this.groupBox2.Controls.Add(this.bt_config);
             this.groupBox2.Controls.Add(this.bt_send);
-            this.groupBox2.Controls.Add(this.button_disconnect);
-            this.groupBox2.Controls.Add(this.button_connect);
+            this.groupBox2.Controls.Add(this.bt_disconnect);
+            this.groupBox2.Controls.Add(this.bt_connect);
             this.groupBox2.Controls.Add(this.tb_testCycle);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -151,68 +151,39 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Cycle count";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 21);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 12);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Config File";
-            // 
-            // tb_config
-            // 
-            this.tb_config.Location = new System.Drawing.Point(89, 19);
-            this.tb_config.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_config.Name = "tb_config";
-            this.tb_config.Size = new System.Drawing.Size(163, 22);
-            this.tb_config.TabIndex = 8;
-            // 
-            // bt_config
-            // 
-            this.bt_config.Location = new System.Drawing.Point(264, 17);
-            this.bt_config.Margin = new System.Windows.Forms.Padding(2);
-            this.bt_config.Name = "bt_config";
-            this.bt_config.Size = new System.Drawing.Size(88, 19);
-            this.bt_config.TabIndex = 7;
-            this.bt_config.Text = "Config Read";
-            this.bt_config.UseVisualStyleBackColor = true;
-            this.bt_config.Click += new System.EventHandler(this.bt_config_Click);
-            // 
             // bt_send
             // 
-            this.bt_send.Location = new System.Drawing.Point(294, 85);
+            this.bt_send.Location = new System.Drawing.Point(211, 53);
             this.bt_send.Margin = new System.Windows.Forms.Padding(2);
             this.bt_send.Name = "bt_send";
-            this.bt_send.Size = new System.Drawing.Size(58, 19);
+            this.bt_send.Size = new System.Drawing.Size(64, 22);
             this.bt_send.TabIndex = 6;
-            this.bt_send.Text = "Send";
+            this.bt_send.Text = "Star";
             this.bt_send.UseVisualStyleBackColor = true;
             this.bt_send.Click += new System.EventHandler(this.bt_send_Click);
             // 
-            // button_disconnect
+            // bt_disconnect
             // 
-            this.button_disconnect.Location = new System.Drawing.Point(427, 89);
-            this.button_disconnect.Margin = new System.Windows.Forms.Padding(2);
-            this.button_disconnect.Name = "button_disconnect";
-            this.button_disconnect.Size = new System.Drawing.Size(80, 27);
-            this.button_disconnect.TabIndex = 3;
-            this.button_disconnect.Text = "Disconnection";
-            this.button_disconnect.UseVisualStyleBackColor = true;
-            this.button_disconnect.Click += new System.EventHandler(this.button_disconnect_Click);
+            this.bt_disconnect.Location = new System.Drawing.Point(427, 89);
+            this.bt_disconnect.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_disconnect.Name = "bt_disconnect";
+            this.bt_disconnect.Size = new System.Drawing.Size(80, 27);
+            this.bt_disconnect.TabIndex = 3;
+            this.bt_disconnect.Text = "Disconnection";
+            this.bt_disconnect.UseVisualStyleBackColor = true;
+            this.bt_disconnect.Click += new System.EventHandler(this.button_disconnect_Click);
             // 
-            // button_connect
+            // bt_connect
             // 
-            this.button_connect.AutoSize = true;
-            this.button_connect.Location = new System.Drawing.Point(427, 55);
-            this.button_connect.Margin = new System.Windows.Forms.Padding(2);
-            this.button_connect.Name = "button_connect";
-            this.button_connect.Size = new System.Drawing.Size(78, 27);
-            this.button_connect.TabIndex = 2;
-            this.button_connect.Text = "Connection";
-            this.button_connect.UseVisualStyleBackColor = true;
-            this.button_connect.Click += new System.EventHandler(this.button_connect_Click);
+            this.bt_connect.AutoSize = true;
+            this.bt_connect.Location = new System.Drawing.Point(427, 55);
+            this.bt_connect.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_connect.Name = "bt_connect";
+            this.bt_connect.Size = new System.Drawing.Size(78, 27);
+            this.bt_connect.TabIndex = 2;
+            this.bt_connect.Text = "Connection";
+            this.bt_connect.UseVisualStyleBackColor = true;
+            this.bt_connect.Click += new System.EventHandler(this.button_connect_Click);
             // 
             // tb_testCycle
             // 
@@ -232,6 +203,25 @@
             this.label6.Size = new System.Drawing.Size(51, 12);
             this.label6.TabIndex = 0;
             this.label6.Text = "Test cycle";
+            // 
+            // tb_config
+            // 
+            this.tb_config.Location = new System.Drawing.Point(8, 20);
+            this.tb_config.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_config.Name = "tb_config";
+            this.tb_config.Size = new System.Drawing.Size(163, 22);
+            this.tb_config.TabIndex = 8;
+            // 
+            // bt_config
+            // 
+            this.bt_config.Location = new System.Drawing.Point(83, 46);
+            this.bt_config.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_config.Name = "bt_config";
+            this.bt_config.Size = new System.Drawing.Size(88, 24);
+            this.bt_config.TabIndex = 7;
+            this.bt_config.Text = "Config Read";
+            this.bt_config.UseVisualStyleBackColor = true;
+            this.bt_config.Click += new System.EventHandler(this.bt_config_Click);
             // 
             // groupBox3
             // 
@@ -292,6 +282,7 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox4, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.groupBox3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox5, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -301,6 +292,37 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 136F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(811, 367);
             this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.tb_OutFileName);
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.tb_config);
+            this.groupBox5.Controls.Add(this.bt_config);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Location = new System.Drawing.Point(3, 123);
+            this.groupBox5.Name = "groupBox5";
+            this.tableLayoutPanel1.SetRowSpan(this.groupBox5, 2);
+            this.groupBox5.Size = new System.Drawing.Size(196, 241);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Config & OutFileName";
+            // 
+            // tb_OutFileName
+            // 
+            this.tb_OutFileName.Location = new System.Drawing.Point(11, 112);
+            this.tb_OutFileName.Name = "tb_OutFileName";
+            this.tb_OutFileName.Size = new System.Drawing.Size(159, 22);
+            this.tb_OutFileName.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 12);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Output File Name";
             // 
             // Form1
             // 
@@ -324,6 +346,8 @@
             this.groupBox4.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -334,8 +358,8 @@
         private System.Windows.Forms.ComboBox cb_port;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button_disconnect;
-        private System.Windows.Forms.Button button_connect;
+        private System.Windows.Forms.Button bt_disconnect;
+        private System.Windows.Forms.Button bt_connect;
         private System.Windows.Forms.TextBox tb_testCycle;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -346,11 +370,13 @@
         private System.Windows.Forms.Button bt_send;
         private System.Windows.Forms.CheckBox ch_CRLF;
         private System.Windows.Forms.Button bt_config;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tb_config;
         private System.Windows.Forms.TextBox tb_cycleCount;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox tb_OutFileName;
+        private System.Windows.Forms.Label label2;
     }
 }
 
