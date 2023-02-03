@@ -67,11 +67,9 @@
             this.groupBox1.Controls.Add(this.cb_port);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(2, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(198, 116);
+            this.groupBox1.Size = new System.Drawing.Size(296, 174);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ConnectionSetting";
@@ -81,10 +79,9 @@
             this.ch_CRLF.AutoSize = true;
             this.ch_CRLF.Checked = true;
             this.ch_CRLF.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ch_CRLF.Location = new System.Drawing.Point(64, 59);
-            this.ch_CRLF.Margin = new System.Windows.Forms.Padding(2);
+            this.ch_CRLF.Location = new System.Drawing.Point(96, 88);
             this.ch_CRLF.Name = "ch_CRLF";
-            this.ch_CRLF.Size = new System.Drawing.Size(59, 16);
+            this.ch_CRLF.Size = new System.Drawing.Size(85, 22);
             this.ch_CRLF.TabIndex = 8;
             this.ch_CRLF.Text = "CR+LF";
             this.ch_CRLF.UseVisualStyleBackColor = true;
@@ -92,10 +89,9 @@
             // cb_port
             // 
             this.cb_port.FormattingEnabled = true;
-            this.cb_port.Location = new System.Drawing.Point(64, 31);
-            this.cb_port.Margin = new System.Windows.Forms.Padding(2);
+            this.cb_port.Location = new System.Drawing.Point(96, 46);
             this.cb_port.Name = "cb_port";
-            this.cb_port.Size = new System.Drawing.Size(82, 20);
+            this.cb_port.Size = new System.Drawing.Size(121, 26);
             this.cb_port.TabIndex = 1;
             this.cb_port.Text = "COM1";
             this.cb_port.DropDown += new System.EventHandler(this.comboBox_port_DropDown);
@@ -103,10 +99,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 12);
+            this.label1.Size = new System.Drawing.Size(36, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Port";
             // 
@@ -121,11 +116,9 @@
             this.groupBox2.Controls.Add(this.tb_testCycle);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(204, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(305, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(605, 116);
+            this.groupBox2.Size = new System.Drawing.Size(908, 174);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "TestSetting";
@@ -133,10 +126,9 @@
             // tb_cycleCount
             // 
             this.tb_cycleCount.Enabled = false;
-            this.tb_cycleCount.Location = new System.Drawing.Point(89, 83);
-            this.tb_cycleCount.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_cycleCount.Location = new System.Drawing.Point(134, 124);
             this.tb_cycleCount.Name = "tb_cycleCount";
-            this.tb_cycleCount.Size = new System.Drawing.Size(90, 22);
+            this.tb_cycleCount.Size = new System.Drawing.Size(133, 29);
             this.tb_cycleCount.TabIndex = 11;
             this.tb_cycleCount.TabStop = false;
             this.tb_cycleCount.Text = "0";
@@ -144,19 +136,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 85);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(14, 128);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 12);
+            this.label7.Size = new System.Drawing.Size(90, 18);
             this.label7.TabIndex = 10;
             this.label7.Text = "Cycle count";
             // 
             // bt_send
             // 
-            this.bt_send.Location = new System.Drawing.Point(211, 53);
-            this.bt_send.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_send.Location = new System.Drawing.Point(316, 80);
             this.bt_send.Name = "bt_send";
-            this.bt_send.Size = new System.Drawing.Size(64, 22);
+            this.bt_send.Size = new System.Drawing.Size(96, 33);
             this.bt_send.TabIndex = 6;
             this.bt_send.Text = "Star";
             this.bt_send.UseVisualStyleBackColor = true;
@@ -164,10 +154,9 @@
             // 
             // bt_disconnect
             // 
-            this.bt_disconnect.Location = new System.Drawing.Point(427, 89);
-            this.bt_disconnect.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_disconnect.Location = new System.Drawing.Point(640, 130);
             this.bt_disconnect.Name = "bt_disconnect";
-            this.bt_disconnect.Size = new System.Drawing.Size(80, 27);
+            this.bt_disconnect.Size = new System.Drawing.Size(142, 44);
             this.bt_disconnect.TabIndex = 3;
             this.bt_disconnect.Text = "Disconnection";
             this.bt_disconnect.UseVisualStyleBackColor = true;
@@ -176,48 +165,44 @@
             // bt_connect
             // 
             this.bt_connect.AutoSize = true;
-            this.bt_connect.Location = new System.Drawing.Point(427, 55);
-            this.bt_connect.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_connect.BackColor = System.Drawing.SystemColors.Control;
+            this.bt_connect.Location = new System.Drawing.Point(640, 82);
             this.bt_connect.Name = "bt_connect";
-            this.bt_connect.Size = new System.Drawing.Size(78, 27);
+            this.bt_connect.Size = new System.Drawing.Size(142, 42);
             this.bt_connect.TabIndex = 2;
             this.bt_connect.Text = "Connection";
-            this.bt_connect.UseVisualStyleBackColor = true;
+            this.bt_connect.UseVisualStyleBackColor = false;
             this.bt_connect.Click += new System.EventHandler(this.button_connect_Click);
             // 
             // tb_testCycle
             // 
-            this.tb_testCycle.Location = new System.Drawing.Point(89, 53);
-            this.tb_testCycle.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_testCycle.Location = new System.Drawing.Point(134, 80);
             this.tb_testCycle.Name = "tb_testCycle";
-            this.tb_testCycle.Size = new System.Drawing.Size(90, 22);
+            this.tb_testCycle.Size = new System.Drawing.Size(133, 29);
             this.tb_testCycle.TabIndex = 1;
             this.tb_testCycle.Text = "1";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 55);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(6, 82);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 12);
+            this.label6.Size = new System.Drawing.Size(80, 18);
             this.label6.TabIndex = 0;
             this.label6.Text = "Test cycle";
             // 
             // tb_config
             // 
-            this.tb_config.Location = new System.Drawing.Point(8, 20);
-            this.tb_config.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_config.Location = new System.Drawing.Point(12, 30);
             this.tb_config.Name = "tb_config";
-            this.tb_config.Size = new System.Drawing.Size(163, 22);
+            this.tb_config.Size = new System.Drawing.Size(242, 29);
             this.tb_config.TabIndex = 8;
             // 
             // bt_config
             // 
-            this.bt_config.Location = new System.Drawing.Point(83, 46);
-            this.bt_config.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_config.Location = new System.Drawing.Point(124, 69);
             this.bt_config.Name = "bt_config";
-            this.bt_config.Size = new System.Drawing.Size(88, 24);
+            this.bt_config.Size = new System.Drawing.Size(132, 36);
             this.bt_config.TabIndex = 7;
             this.bt_config.Text = "Config Read";
             this.bt_config.UseVisualStyleBackColor = true;
@@ -228,11 +213,9 @@
             this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(204, 122);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(305, 183);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(605, 106);
+            this.groupBox3.Size = new System.Drawing.Size(908, 159);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Send Message";
@@ -240,22 +223,19 @@
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(2, 17);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(3, 25);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(601, 87);
+            this.textBox1.Size = new System.Drawing.Size(902, 131);
             this.textBox1.TabIndex = 0;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(204, 232);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Location = new System.Drawing.Point(305, 348);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(605, 133);
+            this.groupBox4.Size = new System.Drawing.Size(908, 199);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Read Message";
@@ -263,11 +243,10 @@
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(2, 17);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(3, 25);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(601, 114);
+            this.textBox2.Size = new System.Drawing.Size(902, 171);
             this.textBox2.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -284,13 +263,12 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox5, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.17391F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.82609F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(811, 367);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 204F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1216, 550);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // groupBox5
@@ -300,38 +278,41 @@
             this.groupBox5.Controls.Add(this.tb_config);
             this.groupBox5.Controls.Add(this.bt_config);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Location = new System.Drawing.Point(3, 123);
+            this.groupBox5.Location = new System.Drawing.Point(4, 184);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.SetRowSpan(this.groupBox5, 2);
-            this.groupBox5.Size = new System.Drawing.Size(196, 241);
+            this.groupBox5.Size = new System.Drawing.Size(294, 362);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Config & OutFileName";
             // 
             // tb_OutFileName
             // 
-            this.tb_OutFileName.Location = new System.Drawing.Point(11, 112);
+            this.tb_OutFileName.Location = new System.Drawing.Point(16, 168);
+            this.tb_OutFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_OutFileName.Name = "tb_OutFileName";
-            this.tb_OutFileName.Size = new System.Drawing.Size(159, 22);
+            this.tb_OutFileName.Size = new System.Drawing.Size(236, 29);
             this.tb_OutFileName.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 93);
+            this.label2.Location = new System.Drawing.Point(24, 140);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 12);
+            this.label2.Size = new System.Drawing.Size(132, 18);
             this.label2.TabIndex = 9;
             this.label2.Text = "Output File Name";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(811, 367);
+            this.ClientSize = new System.Drawing.Size(1216, 550);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";

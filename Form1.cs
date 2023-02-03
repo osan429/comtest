@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.IO.Ports;
 using System.Threading;
@@ -53,9 +54,14 @@ namespace comtest
             //需要新增異常處理
             try
             {
+               // if (serialPort1.IsOpen) 
+                //{
+                //    serialPort1.Close();
+                //}
                 serialPort1.Open();
                 if (serialPort1.IsOpen)
                 {
+                    bt_connect.BackColor= Color.Red;
                     ReadSerialData();
                     bt_connect.Enabled = false; 
                     bt_disconnect.Enabled = true;
@@ -168,6 +174,7 @@ namespace comtest
                 if (serialPort1.IsOpen)
                 {
                     serialPort1.Close();
+                    bt_connect.BackColor = Color.White;
                 }
                 bt_connect.Enabled = true;
                 bt_disconnect.Enabled = false; 
@@ -260,7 +267,12 @@ namespace comtest
             }
             if (tb_config.Text != "") 
             {
-                bt_connect.Enabled = true;
+                //若還在連線狀態讀取資料後不改變按鈕狀態
+                if (serialPort1.IsOpen != true) 
+                {
+                    bt_connect.Enabled = true;
+                }
+                
             }
         }
 
